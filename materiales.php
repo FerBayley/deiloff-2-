@@ -1,34 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<title>Deiloff Marmoleria - Productos</title>
+<?php
+/*
+Template Name: materiales
+*/
+?>
 
-	<meta name="description" content="Marmoleria Deiloff de Entre Rios">
+<?php get_header(); ?>
 
-	<!-- VIEWPORT -->
-	<meta name="viewport" content="width=device-width, initial-escale=1.0">
-	<!-- VIEWPORT -->
-
-	<!-- CSS -->
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css">
-	<!-- CSS -->
-
-	<!-- JS -->
-	<script type="text/javascript" src="js/modernizr.custom.48366.js"></script>
-	<!-- JS -->
-
-	<!-- FAVICON -->
-	<link rel="shortcut icon" href="favicon.ico" />
-	<!-- FAVICON -->
-
-
-	<!--[if lt IE 9]>
-    	<script src="components/html5shiv/html5shiv.js"></script>
-	<![endif]-->
-
-</head>
 <body>
 
 	<section class="Main">
@@ -38,20 +15,21 @@
 				<section class="Contenedor-paginaInterna">
 					<div class="Logo-interno">
 						<a href="index.html">
-							<img src="img/logo-interno.jpg" alt="Deiloff Marmolria">
+							<img src="<?php bloginfo('template_directory'); ?>/img/logo-interno.jpg" alt="Deiloff Marmolria">
 						</a>
 					</div> <!-- End of Logo-interno -->
 
 					<div class="Menu-interno">
 						<p>(0343) 499-9231 info@deiloffmarmoleria.com</p>
 
-						<ul>
-							<li><a href="index.html">INICIO</a></li>
-							<li><a href="nosotros.html">NOSOTROS</a></li>
-							<li><a href="materiales.html">MATERIALES</a></li>
-							<li><a href="trabajos.html">TRABAJOS</a></li>
-							<li><a href="contacto.html">CONTACTO</a></li>
-						</ul>
+						<nav>
+							<?php wp_nav_menu(
+							array(
+							'container' => false,
+							'items_wrap' => '<ul id="menu-top">%3$s</ul>',
+							'theme_location' =>'menu'
+							));	?>
+						</nav>
 					</div> <!-- End of Menu-interno -->
 				</section> <!-- End of Contenedor-paginaInterna -->
 			</section> <!-- End of Header-interno -->
@@ -72,15 +50,24 @@
 				<section class="Galeria-productos">
 
 					<div class="Gal1">					
-							<img src="materiales/arenisca/arenisca1.jpg" width="158" height="158" alt="Arenisca">
-							<h2>Arenisca</h2>
+							<img src="<?php bloginfo('template_directory'); ?>/materiales/arenisca/arenisca1.jpg" width="158" height="158" alt="Arenisca">
+							<h2><?php the_title(); ?></h2>
+
+							<?php query_posts("category_name=materiales-col1"); ?>
+							<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
+							<p><?php the_content(); ?></p>							
+
+							<?php endwhile; else: ?>
+
+							<h6>No se an encontado articulos</h6>
+							<?php endif; ?>
 								<a href="arenisca.html">
 									<div class="Boton">
 										ver mas
 									</div> <!-- End of Boton -->
 								</a>
 
-							<img src="materiales/marmol/marmol.jpg" width="158" height="158" alt="Marmol">
+							<img src="<?php bloginfo('template_directory'); ?>/materiales/marmol/marmol.jpg" width="158" height="158" alt="Marmol">
 							<h2>Marmol</h2>
 								<a href="marmoles.html">
 									<div class="Boton">
@@ -88,7 +75,7 @@
 									</div> <!-- End of Boton -->
 								</a>
 
-							<img src="materiales/silestone/silestone.jpg" width="158" height="158" alt="Silestone">
+							<img src="<?php bloginfo('template_directory'); ?>/materiales/silestone/silestone.jpg" width="158" height="158" alt="Silestone">
 							<h2>Silestone</h2>
 								<a href="#">
 									<div class="Boton">
@@ -98,7 +85,7 @@
 					</div> <!-- End of Gal1 -->
 
 				<div class="Gal2">
-					<img src="materiales/calizas/calizas1.jpg" width="158" height="158" alt="Caliza">
+					<img src="<?php bloginfo('template_directory'); ?>/materiales/calizas/calizas1.jpg" width="158" height="158" alt="Caliza">
 						<h2>Calizas</h2>
 							<a href="calizas.html">
 								<div class="Boton">
@@ -106,7 +93,7 @@
 								</div> <!-- End of Boton -->
 							</a>
 
-						<img src="materiales/neolith/neolith.jpg" width="158" height="158" alt="Neolith">
+						<img src="<?php bloginfo('template_directory'); ?>/materiales/neolith/neolith.jpg" width="158" height="158" alt="Neolith">
 						<h2>Neolith</h2>
 							<a href="#">
 								<div class="Boton">
@@ -114,7 +101,7 @@
 								</div> <!-- End of Boton -->
 							</a>
 
-						<img src="materiales/travertino/travertino.jpg" width="158" height="158" alt="Travertino">
+						<img src="<?php bloginfo('template_directory'); ?>/materiales/travertino/travertino.jpg" width="158" height="158" alt="Travertino">
 						<h2>Travertino</h2>
 							<a href="#">
 								<div class="Boton">
@@ -125,7 +112,7 @@
 
 
 				<div class="Gal3">
-					<img src="materiales/prexury/amethyst.jpg" width="158" height="158" alt="Amethyst">
+					<img src="<?php bloginfo('template_directory'); ?>/materiales/prexury/amethyst.jpg" width="158" height="158" alt="Amethyst">
 						<h2>Colecci&oacute;n Prexury</h2>
 							<a href="prexury.html">
 								<div class="Boton">
@@ -133,7 +120,7 @@
 								</div> <!-- End of Boton -->
 							</a>
 
-						<img src="materiales/onix/onix.jpg" width="158" height="158" alt="Onix">
+						<img src="<?php bloginfo('template_directory'); ?>/materiales/onix/onix.jpg" width="158" height="158" alt="Onix">
 						<h2>Onix</h2>
 							<a href="#">
 								<div class="Boton">
@@ -144,7 +131,7 @@
 
 
 				<div class="Gal4">
-					<img src="materiales/cuarcita/cuarcita.jpg" width="158" height="158" alt="Cuarcita">
+					<img src="<?php bloginfo('template_directory'); ?>/materiales/cuarcita/cuarcita.jpg" width="158" height="158" alt="Cuarcita">
 						<h2>Cuarcita</h2>
 							<a href="cuarcita.html">
 								<div class="Boton">
@@ -152,7 +139,7 @@
 								</div> <!-- End of Boton -->
 							</a>
 
-					<img src="materiales/pizarra/pizarra.jpg" width="158" height="158" alt="Pizarra">
+					<img src="<?php bloginfo('template_directory'); ?>/materiales/pizarra/pizarra.jpg" width="158" height="158" alt="Pizarra">
 						<h2>Pizarra</h2>
 							<a href="#">
 								<div class="Boton">
@@ -163,7 +150,7 @@
 
 
 				<div class="Gal5">
-					<img src="materiales/granito/granito.jpg" width="158" height="158" alt="Granito">
+					<img src="<?php bloginfo('template_directory'); ?>/materiales/granito/granito.jpg" width="158" height="158" alt="Granito">
 						<h2>Granito</h2>
 							<a href="#">
 								<div class="Boton">
@@ -171,7 +158,7 @@
 								</div> <!-- End of Boton -->
 							</a>
 
-					<img src="materiales/porfido/porfido.jpg" width="158" height="158" alt="Porfido">
+					<img src="<?php bloginfo('template_directory'); ?>/materiales/porfido/porfido.jpg" width="158" height="158" alt="Porfido">
 						<h2>Porfido</h2>
 							<a href="#">
 								<div class="Boton">
@@ -183,35 +170,7 @@
 			</section> <!-- End of Central -->
 
 
-			<section class="Cont-pie">
-
-				<section class="Pie-info">
-					<div class="Data-footer">
-						<p>
-							Todos los derechos reservados 2014 - Ruta 11, km 24 Aldea Spatzenkutter Entre R&iacute;os 3101 (0343) 499-9231 
-							<a href="mailto:info@deiloffmarmoleria.com">
-								info@deiloffmarmoleria.com
-							</a>
-						</p>
-					</div> <!-- End of Data-footer -->
-
-					<div class="Data-redes">
-						<ul>
-							<li>
-								<a href="#">
-									<img src="img/facebook-footer.jpg" alt="Facebook">
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="img/instagram-footer.jpg" alt="Instagram">	
-								</a>
-							</li>
-						</ul>
-					</div> <!-- End of Data-redes -->
-				</section> <!-- End of Pie-info -->
-
-			</section> <!-- End of Cont-pie -->
+		<?php get_footer(); ?>
 	</section> <!-- End of Main -->
 	
 </body>

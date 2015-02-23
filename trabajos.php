@@ -1,34 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<title>Deiloff Marmoleria - Trabajos realizados</title>
+<?php
+/*
+Template Name: trabajos
+*/
+?>
 
-	<meta name="description" content="Marmoleria Deiloff de Entre Rios">
+<?php get_header(); ?>
 
-	<!-- VIEWPORT -->
-	<meta name="viewport" content="width=device-width, initial-escale=1.0">
-	<!-- VIEWPORT -->
-
-	<!-- CSS -->
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css">
-	<!-- CSS -->
-
-	<!-- JS -->
-	<script type="text/javascript" src="js/modernizr.custom.48366.js"></script>
-	<!-- JS -->
-
-	<!-- FAVICON -->
-	<link rel="shortcut icon" href="favicon.ico" />
-	<!-- FAVICON -->
-
-
-	<!--[if lt IE 9]>
-    	<script src="components/html5shiv/html5shiv.js"></script>
-	<![endif]-->
-
-</head>
 <body>
 
 	<section class="Main">
@@ -38,20 +15,21 @@
 				<section class="Contenedor-paginaInterna">
 					<div class="Logo-interno">
 						<a href="index.html">
-							<img src="img/logo-interno.jpg" alt="Deiloff Marmolria">
+							<img src="<?php bloginfo('template_directory'); ?>/img/logo-interno.jpg" alt="Deiloff Marmolria">
 						</a>
 					</div> <!-- End of Logo-interno -->
 
 					<div class="Menu-interno">
 						<p>(0343) 499-9231 info@deiloffmarmoleria.com</p>
 
-						<ul>
-							<li><a href="index.html">INICIO</a></li>
-							<li><a href="nosotros.html">NOSOTROS</a></li>
-							<li><a href="materiales.html">MATERIALES</a></li>
-							<li><a href="trabajos.html">TRABAJOS</a></li>
-							<li><a href="contacto.html">CONTACTO</a></li>
-						</ul>
+						<nav>
+							<?php wp_nav_menu(
+							array(
+							'container' => false,
+							'items_wrap' => '<ul id="menu-top">%3$s</ul>',
+							'theme_location' =>'menu'
+							));	?>
+						</nav>
 					</div> <!-- End of Menu-interno -->
 				</section> <!-- End of Contenedor-paginaInterna -->
 			</section> <!-- End of Header-interno -->
@@ -72,7 +50,7 @@
 				<section class="Galeria-productos">
 
 					<div class="Gal1">					
-							<img src="img/trabajos/trabajo1.jpg" width="158" height="158" alt="Trabajos realizados">
+							<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo1.jpg" width="158" height="158" alt="Trabajos realizados">
 							<h2>Nombre el trabajo</h2>
 								<a href="#">
 									<div class="Boton">
@@ -80,7 +58,7 @@
 									</div> <!-- End of Boton -->
 								</a>
 
-								<img src="img/trabajos/trabajo2.jpg" width="158" height="158" alt="Marmol Amarello">
+								<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo2.jpg" width="158" height="158" alt="Marmol Amarello">
 									<h2>Nombre del trabajo</h2>
 										<a href="#">
 											<div class="Boton">
@@ -90,7 +68,7 @@
 					</div> <!-- End of Gal1 -->
 
 				<div class="Gal2">
-					<img src="img/trabajos/trabajo3.jpg" width="158" height="158" alt="Marmol Amarillo">
+					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo3.jpg" width="158" height="158" alt="Marmol Amarillo">
 						<h2>Nombre del trabajo</h2>
 							<a href="#">
 								<div class="Boton">
@@ -99,7 +77,7 @@
 							</a>
 
 
-					<img src="img/trabajos/trabajo3.jpg" width="158" height="158" alt="Marmol Amarillo">
+					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo3.jpg" width="158" height="158" alt="Marmol Amarillo">
 						<h2>Nombre del trabajo</h2>
 							<a href="#">
 								<div class="Boton">
@@ -110,7 +88,7 @@
 
 
 				<div class="Gal3">
-					<img src="img/trabajos/trabajo1.jpg" width="158" height="158" alt="Marmol Amarillo">
+					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo1.jpg" width="158" height="158" alt="Marmol Amarillo">
 						<h2>Nombre del trabajo</h2>
 							<a href="#">
 								<div class="Boton">
@@ -118,7 +96,7 @@
 								</div> <!-- End of Boton -->
 							</a>
 
-					<img src="img/trabajos/trabajo2.jpg" width="158" height="158" alt="Marmol Amarillo">
+					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo2.jpg" width="158" height="158" alt="Marmol Amarillo">
 						<h2>Nombre del trabajo</h2>
 							<a href="#">
 								<div class="Boton">
@@ -129,7 +107,7 @@
 
 
 				<div class="Gal4">
-					<img src="img/trabajos/trabajo3.jpg" width="158" height="158" alt="Marmol Amarillo">
+					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo3.jpg" width="158" height="158" alt="Marmol Amarillo">
 						<h2>Nombre del trabajo</h2>
 							<a href="#">
 								<div class="Boton">
@@ -137,7 +115,7 @@
 								</div> <!-- End of Boton -->
 							</a>
 
-					<img src="img/trabajos/trabajo1.jpg" width="158" height="158" alt="Marmol Amarillo">
+					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo1.jpg" width="158" height="158" alt="Marmol Amarillo">
 						<h2>Nombre del trabajo</h2>
 							<a href="#">
 								<div class="Boton">
@@ -148,7 +126,7 @@
 
 
 				<div class="Gal5">
-					<img src="img/trabajos/trabajo2.jpg" width="158" height="158" alt="Marmol Amarillo">
+					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo2.jpg" width="158" height="158" alt="Marmol Amarillo">
 						<h2>Nombre del trabajo</h2>
 							<a href="#">
 								<div class="Boton">
@@ -156,7 +134,7 @@
 								</div> <!-- End of Boton -->
 							</a>
 
-					<img src="img/trabajos/trabajo1.jpg" width="158" height="158" alt="Marmol Amarillo">
+					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo1.jpg" width="158" height="158" alt="Marmol Amarillo">
 						<h2>Nombre del trabajo</h2>
 							<a href="#">
 								<div class="Boton">
@@ -167,36 +145,8 @@
 			</section> <!-- End of Galeria-productos -->
 			</section> <!-- End of Central -->
 
-
-			<section class="Cont-pie">
-
-				<section class="Pie-info">
-					<div class="Data-footer">
-						<p>
-							Todos los derechos reservados 2014 - Ruta 11, km 24 Aldea Spatzenkutter Entre R&iacute;os 3101 (0343) 499-9231 
-							<a href="mailto:info@deiloffmarmoleria.com">
-								info@deiloffmarmoleria.com
-							</a>
-						</p>
-					</div> <!-- End of Data-footer -->
-
-					<div class="Data-redes">
-						<ul>
-							<li>
-								<a href="#">
-									<img src="img/facebook-footer.jpg" alt="Facebook">
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="img/instagram-footer.jpg" alt="Instagram">	
-								</a>
-							</li>
-						</ul>
-					</div> <!-- End of Data-redes -->
-				</section> <!-- End of Pie-info -->
-
-			</section> <!-- End of Cont-pie -->
+	<?php get_footer(); ?>
+			
 	</section> <!-- End of Main -->
 	
 </body>

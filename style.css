@@ -1,0 +1,11 @@
+/*
+Theme Name: Deiloff Marmoleria
+Description: Sitio creado en exclusivo para Marmoleria Deiloff
+Author: Arquinova
+Author URI: http://www.dospuntoclick.com.ar
+Version: 1.0.0
+*/
+
+@import url('../deiloff-2-/css/normalize.css');
+@import url('../deiloff-2-/css/main.css');
+@import url('../deiloff-2-/css/responsivemobilemenu.css');
