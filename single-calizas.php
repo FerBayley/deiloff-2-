@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: materiales
-*/
-?>
-
 <?php get_header(); ?>
 
 <body>
@@ -39,7 +33,7 @@ Template Name: materiales
 				
 				<section class="Materiales">
 					<section class="Contenedor-materiales">
-						<h2>Materiales</h2>
+						<h2>Materiales > <span><?php the_title(); ?></span></h2>
 					</section> <!-- End of Contenedor-materiales -->
 				</section> <!--End of Materiales -->
 
@@ -51,56 +45,7 @@ Template Name: materiales
 				<section class="Galeria-productos">
 				<!-- GALERIA 1 -->
 					<div class="Gal1">	
-						<?php query_posts("category_name=arenisca"); ?>
-
-						<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
-
-						<div class="thumb">
-							<a href="<?php the_permalink(); ?>">
-								<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
-							</a>
-						</div> <!-- End of thumb -->
-
-						<h2><?php the_title(); ?></h2>
-						<p><?php the_content(); ?></p>	
-
-						<a href="<?php the_permalink(); ?>">
-							<div class="Boton">
-								ver mas
-							</div> <!-- End of Boton -->
-						</a>						
-
-						<?php endwhile; else: ?>
-
-						<h6>No se encontado articulos</h6>
-						<?php endif; ?>
-
-
-						<?php query_posts("category_name=marmol"); ?>
-
-						<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
-
-						<div class="thumb">
-							<a href="<?php the_permalink(); ?>">
-								<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
-							</a>
-						</div> <!-- End of thumb -->
-
-						<h2><?php the_title(); ?></h2>
-						<p><?php the_content(); ?></p>	
-
-						<a href="<?php the_permalink(); ?>">
-							<div class="Boton">
-								ver mas
-							</div> <!-- End of Boton -->
-						</a>						
-
-						<?php endwhile; else: ?>
-
-						<h6>No se encontado articulos</h6>
-						<?php endif; ?>
-
-						<?php query_posts("category_name=silestone"); ?>
+						<?php query_posts("category_name=calizas-col1"); ?>
 
 						<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 
@@ -129,56 +74,7 @@ Template Name: materiales
 
 				<!-- GALERIA 2 -->
 				<div class="Gal2">
-					<?php query_posts("category_name=calizas"); ?>
-
-					<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
-
-					<div class="thumb">
-						<a href="<?php the_permalink(); ?>">
-							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
-						</a>
-					</div> <!-- End of thumb -->
-
-					<h2><?php the_title(); ?></h2>
-					<p><?php the_content(); ?></p>	
-
-					<a href="<?php the_permalink(); ?>">
-						<div class="Boton">
-							ver mas
-						</div> <!-- End of Boton -->
-					</a>						
-
-					<?php endwhile; else: ?>
-
-					<h6>No se encontado materiales</h6>
-					<?php endif; ?>
-
-
-					<?php query_posts("category_name=neolith"); ?>
-
-					<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
-
-					<div class="thumb">
-						<a href="<?php the_permalink(); ?>">
-							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
-						</a>
-					</div> <!-- End of thumb -->
-
-					<h2><?php the_title(); ?></h2>
-					<p><?php the_content(); ?></p>	
-
-					<a href="<?php the_permalink(); ?>">
-						<div class="Boton">
-							ver mas
-						</div> <!-- End of Boton -->
-					</a>						
-
-					<?php endwhile; else: ?>
-
-					<h6>No se encontado materiales</h6>
-					<?php endif; ?>
-
-					<?php query_posts("category_name=travertino"); ?>
+					<?php query_posts("category_name=calizas-col2"); ?>
 
 					<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 
@@ -207,31 +103,7 @@ Template Name: materiales
 
 				<!-- GALERIA 3 -->
 				<div class="Gal3">
-					<?php query_posts("category_name=prexury"); ?>
-
-					<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
-
-					<div class="thumb">
-						<a href="<?php the_permalink(); ?>">
-							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
-						</a>
-					</div> <!-- End of thumb -->
-
-					<h2><?php the_title(); ?></h2>
-					<p><?php the_content(); ?></p>	
-
-					<a href="<?php the_permalink(); ?>">
-						<div class="Boton">
-							ver mas
-						</div> <!-- End of Boton -->
-					</a>						
-
-					<?php endwhile; else: ?>
-
-					<h6>No se encontado materiales</h6>
-					<?php endif; ?>
-
-					<?php query_posts("category_name=onix"); ?>
+					<?php query_posts("category_name=calizas-col3"); ?>
 
 					<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 
@@ -260,31 +132,7 @@ Template Name: materiales
 
 				<!-- GALERIA 4 -->
 				<div class="Gal4">
-					<?php query_posts("category_name=cuarcita"); ?>
-
-					<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
-
-					<div class="thumb">
-						<a href="<?php the_permalink(); ?>">
-							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
-						</a>
-					</div> <!-- End of thumb -->
-
-					<h2><?php the_title(); ?></h2>
-					<p><?php the_content(); ?></p>	
-
-					<a href="<?php the_permalink(); ?>">
-						<div class="Boton">
-							ver mas
-						</div> <!-- End of Boton -->
-					</a>						
-
-					<?php endwhile; else: ?>
-
-					<h6>No se encontado materiales</h6>
-					<?php endif; ?>
-
-					<?php query_posts("category_name=pizarra"); ?>
+					<?php query_posts("category_name=calizas-col4"); ?>
 
 					<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 
@@ -313,32 +161,7 @@ Template Name: materiales
 
 				<!-- GALERIA 5 -->
 				<div class="Gal5">
-					<?php query_posts("category_name=granito"); ?>
-
-					<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
-
-					<div class="thumb">
-						<a href="<?php the_permalink(); ?>">
-							<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
-						</a>
-					</div> <!-- End of thumb -->
-
-					<h2><?php the_title(); ?></h2>
-					<p><?php the_content(); ?></p>	
-
-					<a href="<?php the_permalink(); ?>">
-						<div class="Boton">
-							ver mas
-						</div> <!-- End of Boton -->
-					</a>						
-
-					<?php endwhile; else: ?>
-
-					<h6>No se encontado materiales</h6>
-					<?php endif; ?>
-
-
-					<?php query_posts("category_name=porfido"); ?>
+					<?php query_posts("category_name=calizas-col5"); ?>
 
 					<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 

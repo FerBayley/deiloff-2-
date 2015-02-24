@@ -13,7 +13,7 @@
 	<div class="Data-redes">
 		<ul>
 			<li>
-				<a href="#">
+				<a href="https://www.facebook.com/pages/Deiloff-Marmoleria/596682737053447" target="blanck">
 					<img src="<?php bloginfo('template_directory'); ?>/img/facebook-footer.jpg" alt="Facebook">
 				</a>
 			</li>
@@ -27,3 +27,5 @@
 </section> <!-- End of Pie-info -->
 
 </section> <!-- End of Cont-pie -->
+
+<?php wp_footer(); ?>

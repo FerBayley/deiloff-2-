@@ -60,6 +60,7 @@
 
 			</section> <!-- End of Contenido-central -->
 	</section> <!-- End of Main -->
-	
+
+	<?php wp_footer(); ?>	
 </body>
 </html>

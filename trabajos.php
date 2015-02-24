@@ -49,99 +49,150 @@ Template Name: trabajos
 				
 				<section class="Galeria-productos">
 
+					<!-- GALERIA 1 -->
 					<div class="Gal1">					
-							<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo1.jpg" width="158" height="158" alt="Trabajos realizados">
-							<h2>Nombre el trabajo</h2>
-								<a href="#">
-									<div class="Boton">
-										ver mas
-									</div> <!-- End of Boton -->
-								</a>
+						<?php query_posts("category_name=trabajos-col1"); ?>
 
-								<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo2.jpg" width="158" height="158" alt="Marmol Amarello">
-									<h2>Nombre del trabajo</h2>
-										<a href="#">
-											<div class="Boton">
-												ver mas
-											</div> <!-- End of Boton -->
-										</a>
+						<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
+
+						<div class="thumb">
+							<a href="<?php the_permalink(); ?>">
+								<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
+							</a>
+						</div> <!-- End of thumb -->
+
+						<h2><?php the_title(); ?></h2>
+						<p><?php the_content(); ?></p>	
+
+						<a href="arenisca.html">
+							<div class="Boton">
+								ver mas
+							</div> <!-- End of Boton -->
+						</a>						
+
+						<?php endwhile; else: ?>
+
+						<h6>No se encontado materiales</h6>
+						<?php endif; ?>
 					</div> <!-- End of Gal1 -->
+					<!-- GALERIA 1 -->
 
+				
+				<!-- GALERIA 2 -->
 				<div class="Gal2">
-					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo3.jpg" width="158" height="158" alt="Marmol Amarillo">
-						<h2>Nombre del trabajo</h2>
-							<a href="#">
-								<div class="Boton">
-									ver mas
-								</div> <!-- End of Boton -->
-							</a>
+					<?php query_posts("category_name=trabajos-col2"); ?>
 
+						<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 
-					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo3.jpg" width="158" height="158" alt="Marmol Amarillo">
-						<h2>Nombre del trabajo</h2>
-							<a href="#">
-								<div class="Boton">
-									ver mas
-								</div> <!-- End of Boton -->
+						<div class="thumb">
+							<a href="<?php the_permalink(); ?>">
+								<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
 							</a>
+						</div> <!-- End of thumb -->
+
+						<h2><?php the_title(); ?></h2>
+						<p><?php the_content(); ?></p>	
+
+						<a href="arenisca.html">
+							<div class="Boton">
+								ver mas
+							</div> <!-- End of Boton -->
+						</a>						
+
+						<?php endwhile; else: ?>
+
+						<h6>No se encontado materiales</h6>
+						<?php endif; ?>
 				</div> <!-- End of Gal2 -->
+				<!-- GALERIA 2 -->
 
 
+				<!-- GALERIA 3 -->
 				<div class="Gal3">
-					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo1.jpg" width="158" height="158" alt="Marmol Amarillo">
-						<h2>Nombre del trabajo</h2>
-							<a href="#">
-								<div class="Boton">
-									ver mas
-								</div> <!-- End of Boton -->
-							</a>
+					<?php query_posts("category_name=trabajos-col3"); ?>
 
-					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo2.jpg" width="158" height="158" alt="Marmol Amarillo">
-						<h2>Nombre del trabajo</h2>
-							<a href="#">
-								<div class="Boton">
-									ver mas
-								</div> <!-- End of Boton -->
+						<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
+
+						<div class="thumb">
+							<a href="<?php the_permalink(); ?>">
+								<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
 							</a>
+						</div> <!-- End of thumb -->
+
+						<h2><?php the_title(); ?></h2>
+						<p><?php the_content(); ?></p>	
+
+						<a href="arenisca.html">
+							<div class="Boton">
+								ver mas
+							</div> <!-- End of Boton -->
+						</a>						
+
+						<?php endwhile; else: ?>
+
+						<h6>No se encontado materiales</h6>
+						<?php endif; ?>
 				</div> <!-- End of Gal3 -->
+				<!-- GALERIA 3 -->
 
 
+				<!-- GALERIA 4 -->
 				<div class="Gal4">
-					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo3.jpg" width="158" height="158" alt="Marmol Amarillo">
-						<h2>Nombre del trabajo</h2>
-							<a href="#">
-								<div class="Boton">
-									ver mas
-								</div> <!-- End of Boton -->
-							</a>
+					<?php query_posts("category_name=trabajos-col4"); ?>
 
-					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo1.jpg" width="158" height="158" alt="Marmol Amarillo">
-						<h2>Nombre del trabajo</h2>
-							<a href="#">
-								<div class="Boton">
-									ver mas
-								</div> <!-- End of Boton -->
+						<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
+
+						<div class="thumb">
+							<a href="<?php the_permalink(); ?>">
+								<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
 							</a>
+						</div> <!-- End of thumb -->
+
+						<h2><?php the_title(); ?></h2>
+						<p><?php the_content(); ?></p>	
+
+						<a href="arenisca.html">
+							<div class="Boton">
+								ver mas
+							</div> <!-- End of Boton -->
+						</a>						
+
+						<?php endwhile; else: ?>
+
+						<h6>No se encontado materiales</h6>
+						<?php endif; ?>
 				</div> <!-- End of Gal4 -->
+				<!-- GALERIA 4 -->
 
 
+				<!-- GALERIA 5 -->
 				<div class="Gal5">
-					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo2.jpg" width="158" height="158" alt="Marmol Amarillo">
-						<h2>Nombre del trabajo</h2>
-							<a href="#">
-								<div class="Boton">
-									ver mas
-								</div> <!-- End of Boton -->
-							</a>
+					<?php query_posts("category_name=trabajos-col5"); ?>
 
-					<img src="<?php bloginfo('template_directory'); ?>/img/trabajos/trabajo1.jpg" width="158" height="158" alt="Marmol Amarillo">
-						<h2>Nombre del trabajo</h2>
-							<a href="#">
-								<div class="Boton">
-									ver mas
-								</div> <!-- End of Boton -->
+						<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
+
+						<div class="thumb">
+							<a href="<?php the_permalink(); ?>">
+								<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
 							</a>
+						</div> <!-- End of thumb -->
+
+						<h2><?php the_title(); ?></h2>
+						<p><?php the_content(); ?></p>	
+
+						<a href="arenisca.html">
+							<div class="Boton">
+								ver mas
+							</div> <!-- End of Boton -->
+						</a>						
+
+						<?php endwhile; else: ?>
+
+						<h6>No se encontado materiales</h6>
+						<?php endif; ?>
 				</div> <!-- End of Gal5 -->
+				<!-- GALERIA 5 -->
+
 			</section> <!-- End of Galeria-productos -->
 			</section> <!-- End of Central -->
 

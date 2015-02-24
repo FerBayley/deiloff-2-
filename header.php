@@ -27,4 +27,6 @@
     	<script src="components/html5shiv/html5shiv.js"></script>
 	<![endif]-->
 
+	<?php wp_head(); ?>
+
 </head>
