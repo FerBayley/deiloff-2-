@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<title>Deiloff Marmoleria</title>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<title><?php the_title(); ?></title>
 
 	<meta name="description" content="Marmoleria Deiloff de Entre Rios">
 
@@ -15,7 +15,7 @@
 	<!-- CSS -->
 
 	<!-- JS -->
-	<script type="text/javascript" src="js/modernizr.custom.48366.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.custom.48366.js" type="text/javascript"></script>
 	<!-- JS -->
 
 	<!-- FAVICON -->
