@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<title><?php the_title(); ?></title>
+	<title><?php bloginfo('name'); ?></title>
 
 	<meta name="description" content="Marmoleria Deiloff de Entre Rios">
 

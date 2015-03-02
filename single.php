@@ -189,6 +189,19 @@
     } elseif (in_category(id)) { // Si el post pertenece a la cat 2, redirigir a single-2.php
     include(TEMPLATEPATH . '/travertino/single-travertino-content1.php');
     //CARPETA TRAVERTINO //    
+
+    //CARPETA TRABAJOS //
+    } elseif (in_category(32)) { // Si el post pertenece a la cat 2, redirigir a single-2.php
+    include(TEMPLATEPATH . '/trabajos/single-trabajos-col1.php');
+    } elseif (in_category(33)) { // Si el post pertenece a la cat 2, redirigir a single-2.php
+    include(TEMPLATEPATH . '/trabajos/single-trabajos-col2.php');
+    } elseif (in_category(34)) { // Si el post pertenece a la cat 2, redirigir a single-2.php
+    include(TEMPLATEPATH . '/trabajos/single-trabajos-col3.php');
+    } elseif (in_category(35)) { // Si el post pertenece a la cat 2, redirigir a single-2.php
+    include(TEMPLATEPATH . '/trabajos/single-trabajos-col4.php');
+    } elseif (in_category(36)) { // Si el post pertenece a la cat 2, redirigir a single-2.php
+    include(TEMPLATEPATH . '/trabajos/single-trabajos-col5.php');
+    //CARPETA TRABAJOS //  
     
     
 } ?>

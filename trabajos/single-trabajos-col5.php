@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <body>
-
 	<section class="Main">
 		<section class="Preheader"></section> <!-- End of Preheader -->
 			
@@ -10,30 +9,19 @@
 					<?php include (TEMPLATEPATH . '/logo-interno.php'); ?>
 					<div class="Menu-interno">
 						<p>(0343) 499-9231 info@deiloffmarmoleria.com</p>
-
-						<nav>
-							<?php wp_nav_menu(
-							array(
-							'container' => false,
-							'items_wrap' => '<ul id="menu-top">%3$s</ul>',
-							'theme_location' =>'menu'
-							));	?>
-						</nav>
+						<?php include (TEMPLATEPATH . '/menu.php'); ?>	
 					</div> <!-- End of Menu-interno -->
 				</section> <!-- End of Contenedor-paginaInterna -->
 			</section> <!-- End of Header-interno -->
 
-
 			<section class="Central">				
 				<section class="Materiales">
 					<section class="Contenedor-materiales">
-						<h2>Materiales > <span><?php the_title(); ?></span></h2>
+						<h2>Trabajos realizados</h2>
 					</section> <!-- End of Contenedor-materiales -->
 				</section> <!--End of Materiales -->
 
-					<section class="Buscador">
-						buscador
-					</section> <!-- End of Buscador -->
+					<?php include (TEMPLATEPATH . '/buscador.php'); ?>
 
 				<section class="Galeria-descripcion">
 					<div class="Imagen">

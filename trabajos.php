@@ -5,7 +5,6 @@ Template Name: trabajos
 ?>
 
 <?php get_header(); ?>
-
 <body>
 
 	<section class="Main">
@@ -13,23 +12,10 @@ Template Name: trabajos
 			
 			<section class="Header-interno">
 				<section class="Contenedor-paginaInterna">
-					<div class="Logo-interno">
-						<a href="index.html">
-							<img src="<?php bloginfo('template_directory'); ?>/img/logo-interno.jpg" alt="Deiloff Marmolria">
-						</a>
-					</div> <!-- End of Logo-interno -->
-
+					<?php include (TEMPLATEPATH . '/logo-interno.php'); ?>
 					<div class="Menu-interno">
 						<p>(0343) 499-9231 info@deiloffmarmoleria.com</p>
-
-						<nav>
-							<?php wp_nav_menu(
-							array(
-							'container' => false,
-							'items_wrap' => '<ul id="menu-top">%3$s</ul>',
-							'theme_location' =>'menu'
-							));	?>
-						</nav>
+						<?php include (TEMPLATEPATH . '/menu.php'); ?>	
 					</div> <!-- End of Menu-interno -->
 				</section> <!-- End of Contenedor-paginaInterna -->
 			</section> <!-- End of Header-interno -->
@@ -39,70 +25,51 @@ Template Name: trabajos
 				
 				<section class="Materiales">
 					<section class="Contenedor-materiales">
-						<h2>Trabajos realizados</h2>
+						<h2>Trabajos realizos</h2>
 					</section> <!-- End of Contenedor-materiales -->
 				</section> <!--End of Materiales -->
 
-					<section class="Buscador">
-						<input type="search" name="busqueda" id="buscador" placeholder="Realice su b&uacute;squeda ac&aacute;">
-					</section> <!-- End of Buscador -->
-				
+					<?php include (TEMPLATEPATH . '/buscador.php'); ?>				
+
 				<section class="Galeria-productos">
-
-					<!-- GALERIA 1 -->
-					<div class="Gal1">					
+				<!-- GALERIA 1 -->
+					<div class="Gal1">	
 						<?php query_posts("category_name=trabajos-col1"); ?>
-
 						<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 
-						<div class="thumb">
-							<a href="<?php the_permalink(); ?>">
-								<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
-							</a>
-						</div> <!-- End of thumb -->
-
-						<h2><?php the_title(); ?></h2>
-						<p><?php the_content(); ?></p>	
-
-						<a href="arenisca.html">
-							<div class="Boton">
-								ver mas
-							</div> <!-- End of Boton -->
-						</a>						
+						<div class="Imagenes-trabajos">
+							<div class="thumb">
+								<a href="<?php the_permalink(); ?>">
+									<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
+								</a>
+							</div> <!-- End of thumb -->
+						</div> <!-- End of Imagenes-trabajos -->		 	
 
 						<?php endwhile; else: ?>
 
-						<h6>No se encontado materiales</h6>
-						<?php endif; ?>
+						<h6>No se encontado articulos</h6>
+						<?php endif; ?>						
 					</div> <!-- End of Gal1 -->
-					<!-- GALERIA 1 -->
+				<!-- GALERIA 1 -->
 
-				
+
 				<!-- GALERIA 2 -->
 				<div class="Gal2">
 					<?php query_posts("category_name=trabajos-col2"); ?>
+					<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 
-						<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
-
+					<div class="Imagenes-trabajos">
 						<div class="thumb">
 							<a href="<?php the_permalink(); ?>">
 								<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
 							</a>
 						</div> <!-- End of thumb -->
+					</div> <!-- End of Imagenes-trabajos -->			
 
-						<h2><?php the_title(); ?></h2>
-						<p><?php the_content(); ?></p>	
+					<?php endwhile; else: ?>
 
-						<a href="arenisca.html">
-							<div class="Boton">
-								ver mas
-							</div> <!-- End of Boton -->
-						</a>						
-
-						<?php endwhile; else: ?>
-
-						<h6>No se encontado materiales</h6>
-						<?php endif; ?>
+					<h6>No se encontado materiales</h6>
+					<?php endif; ?>					
 				</div> <!-- End of Gal2 -->
 				<!-- GALERIA 2 -->
 
@@ -110,28 +77,20 @@ Template Name: trabajos
 				<!-- GALERIA 3 -->
 				<div class="Gal3">
 					<?php query_posts("category_name=trabajos-col3"); ?>
+					<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 
-						<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
-
+					<div class="Imagenes-trabajos">
 						<div class="thumb">
 							<a href="<?php the_permalink(); ?>">
 								<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
 							</a>
 						</div> <!-- End of thumb -->
+					</div> <!-- End of Imagenes-trabajos -->					
 
-						<h2><?php the_title(); ?></h2>
-						<p><?php the_content(); ?></p>	
+					<?php endwhile; else: ?>
 
-						<a href="arenisca.html">
-							<div class="Boton">
-								ver mas
-							</div> <!-- End of Boton -->
-						</a>						
-
-						<?php endwhile; else: ?>
-
-						<h6>No se encontado materiales</h6>
-						<?php endif; ?>
+					<h6>No se encontado materiales</h6>
+					<?php endif; ?>					
 				</div> <!-- End of Gal3 -->
 				<!-- GALERIA 3 -->
 
@@ -139,28 +98,20 @@ Template Name: trabajos
 				<!-- GALERIA 4 -->
 				<div class="Gal4">
 					<?php query_posts("category_name=trabajos-col4"); ?>
+					<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 
-						<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
-
+					<div class="Imagenes-trabajos">
 						<div class="thumb">
 							<a href="<?php the_permalink(); ?>">
 								<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
 							</a>
 						</div> <!-- End of thumb -->
+					</div> <!-- End of Imagenes-trabajos -->					
 
-						<h2><?php the_title(); ?></h2>
-						<p><?php the_content(); ?></p>	
+					<?php endwhile; else: ?>
 
-						<a href="arenisca.html">
-							<div class="Boton">
-								ver mas
-							</div> <!-- End of Boton -->
-						</a>						
-
-						<?php endwhile; else: ?>
-
-						<h6>No se encontado materiales</h6>
-						<?php endif; ?>
+					<h6>No se encontado materiales</h6>
+					<?php endif; ?>
 				</div> <!-- End of Gal4 -->
 				<!-- GALERIA 4 -->
 
@@ -168,36 +119,26 @@ Template Name: trabajos
 				<!-- GALERIA 5 -->
 				<div class="Gal5">
 					<?php query_posts("category_name=trabajos-col5"); ?>
+					<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 
-						<?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
-
+					<div class="Imagenes-trabajos">
 						<div class="thumb">
 							<a href="<?php the_permalink(); ?>">
 								<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'list_articles_thumbs' ); } ?>
 							</a>
 						</div> <!-- End of thumb -->
+					</div> <!-- End of Imagenes-trabajos -->					
 
-						<h2><?php the_title(); ?></h2>
-						<p><?php the_content(); ?></p>	
+					<?php endwhile; else: ?>
 
-						<a href="arenisca.html">
-							<div class="Boton">
-								ver mas
-							</div> <!-- End of Boton -->
-						</a>						
-
-						<?php endwhile; else: ?>
-
-						<h6>No se encontado materiales</h6>
-						<?php endif; ?>
+					<h6>No se encontado materiales</h6>
+					<?php endif; ?>
 				</div> <!-- End of Gal5 -->
 				<!-- GALERIA 5 -->
 
 			</section> <!-- End of Galeria-productos -->
 			</section> <!-- End of Central -->
-
-	<?php get_footer(); ?>
-			
+		<?php get_footer(); ?>
 	</section> <!-- End of Main -->
 	
 </body>

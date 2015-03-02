@@ -6,23 +6,10 @@
 			
 			<section class="Header-interno">
 				<section class="Contenedor-paginaInterna">
-					<div class="Logo-interno">
-						<a href="index.html">
-							<img src="<?php bloginfo('template_directory'); ?>/img/logo-interno.jpg" alt="Deiloff Marmolria">
-						</a>
-					</div> <!-- End of Logo-interno -->
-
+					<?php include (TEMPLATEPATH . '/logo-interno.php'); ?>
 					<div class="Menu-interno">
 						<p>(0343) 499-9231 info@deiloffmarmoleria.com</p>
-
-						<nav>
-							<?php wp_nav_menu(
-							array(
-							'container' => false,
-							'items_wrap' => '<ul id="menu-top">%3$s</ul>',
-							'theme_location' =>'menu'
-							));	?>
-						</nav>
+						<?php include (TEMPLATEPATH . '/menu.php'); ?>	
 					</div> <!-- End of Menu-interno -->
 				</section> <!-- End of Contenedor-paginaInterna -->
 			</section> <!-- End of Header-interno -->
@@ -35,9 +22,7 @@
 					</section> <!-- End of Contenedor-materiales -->
 				</section> <!--End of Materiales -->
 
-					<section class="Buscador">
-						<input type="search" name="busqueda" id="buscador" placeholder="Realice su b&uacute;squeda ac&aacute;">
-					</section> <!-- End of Buscador -->				
+					<?php include (TEMPLATEPATH . '/buscador.php'); ?>			
 
 				<section class="Galeria-productos">
 				<!-- GALERIA 1 -->

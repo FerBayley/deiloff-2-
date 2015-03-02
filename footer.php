@@ -1,5 +1,4 @@
 <section class="Cont-pie">
-
 	<section class="Pie-info">
 		<div class="Data-footer">
 			<p>
@@ -18,14 +17,12 @@
 				</a>
 			</li>
 			<li>
-		<a href="#">
-			<img src="<?php bloginfo('template_directory'); ?>/img/instagram-footer.jpg" alt="Instagram">	
-		</a>
-	</li>
-	</ul>
-</div> <!-- End of Data-redes -->
+			<a href="#">
+				<img src="<?php bloginfo('template_directory'); ?>/img/instagram-footer.jpg" alt="Instagram">	
+			</a>
+			</li>
+		</ul>
+	</div> <!-- End of Data-redes -->
 </section> <!-- End of Pie-info -->
-
 </section> <!-- End of Cont-pie -->
-
 <?php wp_footer(); ?>
